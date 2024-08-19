@@ -4,7 +4,7 @@ import { AlunosService } from './alunos.service';
 import { CreateAlunoDto } from './dto/create-aluno.dto';
 import { validate } from 'class-validator';
 
-describe('AlunosController', () => {
+describe('Teste para camada controller de alunos', () => {
   let controller: AlunosController;
   let service: AlunosService;
 
@@ -27,7 +27,7 @@ describe('AlunosController', () => {
     service = module.get<AlunosService>(AlunosService);
   });
 
-  it('Testa a rota de criação de aluno', async () => {
+  it('Testa endpoint POST /alunos', async () => {
     const dto = new CreateAlunoDto();
     dto.nome = 'Test Aluno';
     dto.endereco = 'Rua Exemplo, 123';
