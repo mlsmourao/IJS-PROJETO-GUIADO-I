@@ -12,7 +12,7 @@ export class AlunosController {
   cadastrar(@Body() createAlunoDto: CreateAlunoDto) {
     console.log(createAlunoDto instanceof CreateAlunoDto);
     console.log('controller :', createAlunoDto);
-    return this.alunosService.create(createAlunoDto);
+    return this.alunosService.cadastrar(createAlunoDto);
   }
 
 }
