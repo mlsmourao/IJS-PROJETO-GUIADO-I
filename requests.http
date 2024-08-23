@@ -2,7 +2,7 @@
 
 GET http://localhost:3000
 
-
+################### aluno ##########################
 ### Cadastrar aluno
 
 POST http://localhost:3000/alunos
@@ -13,7 +13,80 @@ Content-Type: application/json
     "endereco": "teste",
     "telefone": "1234",
     "email": "teste@email.com",
-    "anoNascimento": 2002,
-    "xuxu": "xuxu"
-
+    "anoNascimento": 2002
 }
+
+### Obter Lista de Alunos
+
+GET http://localhost:3000/alunos
+
+################### Professor ########################
+
+### Cadastrar Professor
+
+POST http://localhost:3000/professor
+Content-Type: application/json
+
+{
+    "nome": "Maria",
+    "endereco": "teste",
+    "telefone": "1234",
+    "email": "teste@email.com",
+    "anoNascimento": 2002
+}
+
+
+### Listar professores
+
+GET http://localhost:3000/professor
+
+################### Curso ##########################
+
+### Cadastrar curso
+
+POST http://localhost:3000/curso
+Content-Type: application/json
+
+{
+    "nome": "ON-36",
+    "descricao": "Imersao JS e Nuvem AWS",
+    "cargaHoraria": 360,
+}
+
+### Listar Cursos
+
+GET http://localhost:3000/curso
+
+################### Matricula ########################
+
+### Registrar Matricula
+
+POST http://localhost:3000/matricula
+Content-Type: application/json
+
+{
+    "alunoId": "1",
+    "cursoId": "1",
+    "dataMatricula": "12/01/2022",
+    "status": "finalizado"
+}
+
+### Listar Matricula
+
+GET http://localhost:3000/matricula
+
+################### Presença ##########################
+### Registrar Presenca
+
+POST http://localhost:3000/presenca
+Content-Type: application/json
+
+{
+    "matriculaId": "1",
+    "dataAula": "20/01/2022",
+    "presente": true
+}
+
+### Listar Presença
+
+GET http://localhost:3000/presenca
